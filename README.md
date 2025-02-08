@@ -7,22 +7,22 @@
 3. Создайте ещё один инстанс (2CPU4RAM) на основе образа jetbrains/teamcity-agent. Пропишите к нему переменную окружения SERVER_URL: "http://<teamcity_url>:8111".
 4. Авторизуйте агент.
 
-![Скриншот](https://github.com/garrkiss/Jira/blob/main/img/bug.png)
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0/%D0%92%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%BA%D0%B8.png)
 
-![Скриншот](https://github.com/garrkiss/Jira/blob/main/img/bug.png)
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0/a%D0%B3%D0%B5%D0%BD%D1%82.png)
 
 5. Сделайте fork репозитория. [FORK](https://github.com/garrkiss/example-teamcity)
 6. Создайте VM (2CPU4RAM) и запустите playbook.
 
-![Скриншот](https://github.com/garrkiss/Jira/blob/main/img/bug.png)
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0/ansible.png)
 
 
 ### Основная часть
 
 1. Создайте новый проект в teamcity на основе fork.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/Project.png)
 2. Сделайте autodetect конфигурации.
-
-![alt text](<Скриншот 08.02.25_14.14.28.png>)
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/autodetect.png)
 
 3. Сохраните необходимые шаги, запустите первую сборку master.
 4. Поменяйте условия сборки: если сборка по ветке master, то должен происходит mvn clean deploy, иначе mvn clean test.
