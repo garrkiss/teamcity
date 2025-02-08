@@ -21,29 +21,50 @@
 
 1. Создайте новый проект в teamcity на основе fork.
 ![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/Project.png)
+
 2. Сделайте autodetect конфигурации.
 ![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/autodetect.png)
 
 3. Сохраните необходимые шаги, запустите первую сборку master.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/masterrun.png)
+
 4. Поменяйте условия сборки: если сборка по ветке master, то должен происходит mvn clean deploy, иначе mvn clean test.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/testdeploy.png)
+
 5. Для deploy будет необходимо загрузить settings.xml в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/settings.png)
+
 6. pom.xml необходимо поменять ссылки на репозиторий и nexus.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/nexus.png)
+
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/plaindoll02.png)   
+
 8. Мигрируйте build configuration в репозиторий.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/migration.png)   
+
 9.  Создайте отдельную ветку feature/add_reply в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово hunter.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/huntermain.png)   
+
 11. Дополните тест для нового метода на поиск слова hunter в новой реплике.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/huntertest.png)  
+
 12. Сделайте push всех изменений в новую ветку репозитория.
-13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
-14. Внесите изменения из произвольной ветки feature/add_reply в master через Merge.
-15. Убедитесь, что нет собранного артефакта в сборке по ветке master.
-16. Настройте конфигурацию так, чтобы она собирала .jar в артефакты сборки.
-17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
-18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
-19. В ответе пришлите ссылку на репозиторий.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/addreply.png)   
 
-![Скриншот](https://github.com/garrkiss/Jira/blob/main/img/bug.png)
-![Скриншот](https://github.com/garrkiss/Jira/blob/main/img/all.png)
+13.  Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/runaddreply.png)
 
-[Workflow Bug](https://github.com/garrkiss/Jira/blob/main/files/Bug.xml)
-[Workflow All](https://github.com/garrkiss/Jira/blob/main/files/All.xml)
+14.  Внесите изменения из произвольной ветки feature/add_reply в master через Merge.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/merge.png)
+
+15.  Убедитесь, что нет собранного артефакта в сборке по ветке master. Был артефакт, изменил версию на 0.0.3
+
+16.  Настройте конфигурацию так, чтобы она собирала .jar в артефакты сборки.
+17.  Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
+18.  Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
+![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/jar.png)
+
+19.   В ответе пришлите ссылку на репозиторий. [REPO](https://github.com/garrkiss/example-teamcity)
+
