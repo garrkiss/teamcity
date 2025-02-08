@@ -51,8 +51,6 @@
 ![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/huntertest.png)  
 
 12. Сделайте push всех изменений в новую ветку репозитория.
-![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/addreply.png)   
-
 13.  Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
 ![Скриншот](https://github.com/garrkiss/teamcity/blob/main/img/runaddreply.png)
 
